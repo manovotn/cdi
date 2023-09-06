@@ -116,18 +116,14 @@ public abstract class CDI<T> implements Instance<T> {
      * </p>
      *
      * @param provider the provider to use
-     * @throws IllegalStateException if the {@link CDIProvider} is already set
      * @throws IllegalArgumentException if the provided argument is null
      */
     public static void setCDIProvider(CDIProvider provider) {
-        if (provider == null) {
-            throw new IllegalArgumentException("CDIProvider must not be null");
-        }
-        if (configuredProvider == null) {
+        if (provider != null) {
             providerSetManually = true;
             configuredProvider = provider;
         } else {
-            throw new IllegalStateException("CDIProvider cannot be set repeatedly. Existing provider is " + configuredProvider);
+            throw new IllegalStateException("CDIProvider must not be null");
         }
     }
 
