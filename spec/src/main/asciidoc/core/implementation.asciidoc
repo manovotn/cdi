@@ -667,9 +667,9 @@ Certain legal bean types cannot be proxied by the container:
 * and array types.
 
 
-A bean type must be proxyable if an injection point resolves to a bean:
+A bean type must be proxyable if a bean:
 
-* that requires a client proxy, or
-* that has a bound interceptor.
+* requires a client proxy, or
+* has a bound interceptor.
 
 Otherwise, the container automatically detects the problem, and treats it as a deployment problem.

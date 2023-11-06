@@ -277,8 +277,8 @@ If a decorator has a method annotated `@Disposes`, the container automatically d
 
 In addition to rules defined in <<unproxyable>>, the following rules apply.
 
-A bean type must be proxyable if an injection point resolves to a bean:
+A bean type must be proxyable if a bean:
 
-* that has an associated decorator.
+* has an associated decorator.
 
 Otherwise, the container automatically detects the problem, and treats it as a deployment problem.
